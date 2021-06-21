@@ -7,29 +7,23 @@ import Spinner from './Spinner';
 const Character = ( { match } ) => {
     console.log(match.params.uid);
 
-    const [loading, setLoading] = useState(false);
     const [character, setCharacter] = useState();
 
     useEffect(() => {
-        console.log("In useEffect");
+        const getCharacterDetail = async () => {
+            try {
+                const res = await axios.get("http://stapi.co/api/v1/rest/character?uid=" + match.params.uid);
+                console.log(res.data.character);
+                setCharacter(res.data.character);
+                console.log(res.data.character.characterSpecies.length);
+                console.log("Number of episodes = " + res.data.character.episodes.length);
+            }
+            catch(err) {
+                console.log(err);
+            }
+        }
         getCharacterDetail();
-    }, []);
-
-    const getCharacterDetail = async () => {
-        try {
-            setLoading(true);
-            console.log("loading = " + loading);
-            const res = await axios.get("http://stapi.co/api/v1/rest/character?uid=" + match.params.uid);
-            console.log(res.data.character);
-            setLoading(false);
-            setCharacter(res.data.character);
-            console.log(res.data.character.characterSpecies.length);
-            console.log("Number of episodes = " + res.data.character.episodes.length);
-        }
-        catch(err) {
-            console.log(err);
-        }
-    }
+    }, [match.params.uid]);
 
     if (character) {
         return (

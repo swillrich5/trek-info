@@ -9,18 +9,15 @@ import './SearchCharacters.css';
 
 const SearchCharacters = () => {
 
-    const [loading, setLoading] = useState(false);
     const [characterName, setCharacterName] = useState("");
     const [characters, setCharacters] = useState([]);
 
     const searchCharacters = async (e) => {
 
         e.preventDefault();
-        setLoading(true);
         console.log(characterName);
         const res = await axios.post("http://stapi.co/api/v1/rest/character/search?name=" + characterName)
         console.log(res.data.characters);
-        setLoading(false);
         setCharacters(res.data.characters);
 
     }
@@ -29,10 +26,6 @@ const SearchCharacters = () => {
         setCharacterName(e.target.value);
         console.log(e.target.value);
     }
-
-    // if (loading) {
-    //     return <Spinner />
-    // }
 
     return (
         <div className="container space-background">

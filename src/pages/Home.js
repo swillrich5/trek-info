@@ -19,10 +19,10 @@ const Home = () => {
                     be found <a className="text-primary" href="http://stapi.co/">here</a>.  The GitHub repo can be found <a className="text-primary" href="https://github.com/cezarykluczynski/stapi">here</a>
                 </p>
                 <Link className="row justify-content-center" to='/characters'>
-                    <div class="card col-3 justify-content-center shadow-lg bg-light rounded">
-                        <img class="card-img-top mx-auto pt-3" src={spock} alt="Spock"/>
-                        <div class="card-body">
-                            <p class="card-text text-center">Characters</p>
+                    <div className="card col-3 justify-content-center shadow-lg bg-light rounded">
+                        <img className="card-img-top mx-auto pt-3" src={spock} alt="Spock"/>
+                        <div className="card-body">
+                            <p className="card-text text-center">Characters</p>
                         </div>
                     </div>
                 </Link>
