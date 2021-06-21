@@ -63,7 +63,7 @@ const SearchCharacters = () => {
                         </div>
                     </form>
                 </div>
-                <SearchCharacterResults characters={characters} />
+                {({characters}) ? (<SearchCharacterResults characters={characters} />) : <Spinner />}
             </div>
         </div>
     )

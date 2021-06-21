@@ -51,9 +51,84 @@ const Episode = ( { match } ) => {
                             <p className='col-5'>German Title: {episode.titleGerman}</p>
                             <p className='col-5'>Japanese Title: {episode.titleJapanese}</p>
                         </div>
-
                     </div>
+                    {( episode.teleplayAuthors.length > 0) &&
+                        (<div>
+                            <h4 className="mt-3">Teleplay Written By</h4>
+                            <div className="row justify-content-around">
+                                {episode.teleplayAuthors.map(author =>
+                                    <div key={author.uid} className="card col-3 mx-1 mb-1 px-0" >
+                                        <div className="card-body py-2 px-0">
+                                            {/* <Link to={`/episode/${episode.uid}`}><h5 className="card-title px-1">{episode.title}</h5></Link> */}
+                                            <h5 className="card-title px-1">{author.name}</h5>
+                                        </div>
+                                    </div>                                    
+                                )}
+                            </div>
+                        </div>)
+                    }
+                    {( episode.storyAuthors.length > 0) &&
+                        (<div>
+                            <h4 className="mt-3">Story Authors</h4>
+                            <div className="row justify-content-around">
+                                {episode.storyAuthors.map(author =>
+                                    <div key={author.uid} className="card col-3 mx-1 mb-1 px-0" >
+                                        <div className="card-body py-2 px-0">
+                                            {/* <Link to={`/episode/${episode.uid}`}><h5 className="card-title px-1">{episode.title}</h5></Link> */}
+                                            <h5 className="card-title px-1">{author.name}</h5>
+                                        </div>
+                                    </div>                                    
+                                )}
+                            </div>
+                        </div>)
+                    }
+                    {( episode.directors.length > 0) &&
+                        (<div>
+                            <h4 className="mt-3">Directed By</h4>
+                            <div className="row justify-content-around">
+                                {episode.directors.map(director =>
+                                    <div key={director.uid} className="card col-3 mx-1 mb-1 px-0" >
+                                        <div className="card-body py-2 px-0">
+                                            {/* <Link to={`/episode/${episode.uid}`}><h5 className="card-title px-1">{episode.title}</h5></Link> */}
+                                            <h5 className="card-title px-1">{director.name}</h5>
+                                        </div>
+                                    </div>                                    
+                                )}
+                            </div>
+                        </div>)
+                    }
+                    {( episode.performers.length > 0) &&
+                        (<div>
+                            <h4 className="mt-3">Performers</h4>
+                            <div className="row justify-content-around">
+                                {episode.performers.map(performer =>
+                                    <div key={performer.uid} className="card col-3 mx-1 mb-1 px-0" >
+                                        <div className="card-body py-2 px-0">
+                                            {/* <Link to={`/episode/${episode.uid}`}><h5 className="card-title px-1">{episode.title}</h5></Link> */}
+                                            <h5 className="card-title px-1">{performer.name}</h5>
+                                        </div>
+                                    </div>                                    
+                                )}
+                            </div>
+                        </div>)
+                    }
+                    {( episode.characters.length > 0) &&
+                        (<div>
+                            <h4 className="mt-3">Characters</h4>
+                            <div className="row justify-content-around">
+                                {episode.characters.map(character =>
+                                    <div key={character.uid} className="card col-3 mx-1 mb-1 px-0" >
+                                        <div className="card-body py-2 px-0">
+                                            {/* <Link to={`/episode/${episode.uid}`}><h5 className="card-title px-1">{episode.title}</h5></Link> */}
+                                            <h5 className="card-title px-1">{character.name}</h5>
+                                        </div>
+                                    </div>                                    
+                                )}
+                            </div>
+                        </div>)
+                    }
                 </div>
+
             </div>
         )
     } else {

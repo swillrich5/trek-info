@@ -17,3 +17,8 @@ p {
     text-align:left;
     margin-top: 20px;
 }
+
+img {
+    max-height: 288px;
+    max-width: 218px;
+}

@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
-import SearchCharacters from '../pages/SearchCharacters';
-
-
 
 const Navbar = ({ icon, title }) => {
-
 
     return (
     <div>
@@ -27,7 +22,7 @@ const Navbar = ({ icon, title }) => {
                         <div className="dropdown-menu heading" aria-labelledby="navbarDropdown">    
                             <Link to='/characters' className="dropdown-item"> Characters</Link>
                             {/* <a className="dropdown-item" href="javascript:void(0)">Character Search</a> */}
-                            <Link to='/characters' className="dropdown-item"> Ships</Link>
+                            <Link to='/characters' className="dropdown-item"> More Queries Coming Soon!</Link>
                         </div>
                     </li>
                 </ul>
