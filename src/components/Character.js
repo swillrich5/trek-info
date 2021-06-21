@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Character.css';
-import PropTypes from 'prop-types';
 import Spinner from './Spinner';
 
 const Character = ( { match } ) => {
@@ -64,7 +63,7 @@ const Character = ( { match } ) => {
                             <h4>Episodes</h4>
                             <div className="row justify-content-around">
                                 {character.episodes.map(episode =>
-                                    <div className="card col-3 mx-1 mb-1 px-0" >
+                                    <div key={episode.uid} className="card col-3 mx-1 mb-1 px-0" >
                                         <div className="card-body py-2 px-0">
                                             <Link to={`/episode/${episode.uid}`}><h5 className="card-title px-1">{episode.title}</h5></Link>
                                             {/* <h5 className="card-title px-1">{episode.title}</h5> */}
