@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Character.css';
 import PropTypes from 'prop-types';
@@ -63,15 +64,13 @@ const Character = ( { match } ) => {
                             <h4>Episodes</h4>
                             <div className="row justify-content-around">
                                 {character.episodes.map(episode =>
-                                    
-                                    <div className="card col-4 mx-1 mb-1">
-                                        <div className="card-body">
-                                            <h5 className="card-title">{episode.title}</h5>
-                                            <h6 className="card-subtitle mb-2 text-muted">{episode.series.title}</h6>
-                                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div className="card col-3 mx-1 mb-1 px-0" >
+                                        <div className="card-body py-2 px-0">
+                                            <Link to={`/episode/${episode.uid}`}><h5 className="card-title px-1">{episode.title}</h5></Link>
+                                            {/* <h5 className="card-title px-1">{episode.title}</h5> */}
+                                            <h6 className="card-subtitle mb-2">{episode.series.title}</h6>
                                         </div>
                                     </div>                                    
-                                    
                                 )}
                             </div>
                         </div>)

@@ -13,7 +13,6 @@ const SearchCharacterResults = (props) => {
                             {(!character.gender) ? ( <h6 className="card-subtitle mb-2 text-muted">Gender: Unknown</h6> )  : ( <h6 className="card-subtitle mb-2 text-muted">Sex: {character.gender}</h6> ) }
                             {(!character.yearOfBirth) ? ( <h6 className="card-subtitle mb-2 text-muted">Year of Birth: Unknown</h6> )  : ( <h6 className="card-subtitle mb-2 text-muted">Year of Birth: {character.yearOfBirth}</h6> ) }
                             {(!character.yearOfDeath) ? ( <h6 className="card-subtitle mb-2 text-muted">Year of Death: Unknown</h6> )  : ( <h6 className="card-subtitle mb-2 text-muted">Year of Birth: {character.yearOfDeath}</h6> ) }
-                            {/* {(!character.alternateReality) ? ( <h6 className="card-subtitle mb-2 text-muted">Alternate Reality: Unknown</h6> )  : ( <h6 className="card-subtitle mb-2 text-muted">Alternate Reality: {character.alternateReality}</h6> ) } */}
                             { character.alternateReality ? (<h6 className="card-subtitle mb-2 text-muted">Alternate Reality: True</h6>) : (<h6 className="card-subtitle mb-2 text-muted">Alternate Reality: False</h6> ) }
                             <Link to={`/character/${character.uid}`} className='btn btn-dark btn-sm my-1'>More</Link>
                         </div>
