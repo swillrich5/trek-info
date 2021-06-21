@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Character.css';
+import { spreadElement } from '@babel/types';
 
 const Character = ({match}) => {
     console.log(match.params.uid);
@@ -25,13 +27,31 @@ const Character = ({match}) => {
         <div className="container space-background">
             <div className="jumbotron">
                 <h4>Character Name: {character.name}</h4>
-                <div>
-                    <table>
-                        
-                    </table>
+                <div className="pl-5 ml-5 justify-content-center">
+                    <div className="row justify-content-start">
+                        <p className='col-5'>Species: {character.serialNumber ? (character.serialNumber) : (<span>N/A</span>) }</p>
+                        <p className='col-5'>Gender: {character.gender}</p>
+                    </div>
+                    <div className="row justify-content-start">
+                        <p className='col-5'>Year of Birth: {character.yearOfBirth ? (character.yearOfBirth) : (<span>unknown</span>) }</p>
+                        <p className='col-5'>Year of Death: {character.yearOfDeath ? (character.yearOfDeath) : (<span>unknown</span>) }</p>
+                    </div>
+                    <div className="row justify-content-start">
+                        <p className='col-5'>Blood Type: {character.bloodType ? (character.bloodType) : (<span>unknown</span>) }</p>
+                        <p className='col-5'>Year of Death: {character.yearOfDeath ? (character.yearOfDeath) : (<span>unknown</span>) }</p>
+                    </div>
+                    <div className="row justify-content-start">
+                        <p className='col-5'>Species: 
+                        {character.characterSpecies.map(species => 
+                            <span>{" "}{species.name} {" "} </span>    
+                        )} 
+                        </p>
+                        <p className='col-5'></p>
+                    </div>
                 </div>
+
+            </div>
         </div>
-    </div>
     )
 }
 
