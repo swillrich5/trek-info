@@ -19,6 +19,7 @@ const Character = ({match}) => {
         console.log(res.data.character);
         setLoading(false);
         setCharacter(res.data.character);
+        console.log(res.data.character.characterSpecies.length);
     }
 
     return (
@@ -40,18 +41,16 @@ const Character = ({match}) => {
                         <p className='col-5'>Blood Type: {character.bloodType ? (character.bloodType) : (<span>unknown</span>) }</p>
                         <p className='col-5'>Year of Death: {character.yearOfDeath ? (character.yearOfDeath) : (<span>unknown</span>) }</p>
                     </div>
-                    <div className="row justify-content-start">
-                        <p className='col-5'>Species: 
-                        {character.characterSpecies.map(species => 
-                            <span>{" "}{species.name} {" "} </span>    
-                        )} 
-                        </p>
-                        <p className='col-5'></p>
+                    {(character.characterSpecies.length > 0) && 
+                        (<div className="row justify-content-start">
+                            <p className='col-5'>Species: 
+                                {character.characterSpecies.map(species => 
+                                    <span> {' '} {species.name} {' '} </span> )}
+                            </p>
+                        </div>)}
                     </div>
                 </div>
-
             </div>
-        </div>
     )
 }
 
