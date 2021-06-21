@@ -10,8 +10,7 @@ const Home = () => {
             <div className="jumbotron">
                 <h2>Welcome to Trek-Info</h2>
                 <h2>Learning More about the STAPI - The Star Trek API</h2>
-                <h4 className="mb-3">Created by Cezary Kluczyński</h4>
-                <p className="lead">This is my attempt at exploiting STAPI to learn more about the API and APIs in general.  I'm also hopeful that this will help others to learn more about Star Trek and how STAPI works.
+                <p className="lead">This is my attempt at exploiting Cezary Kluczyński's STAPI (Star Trek API) to learn more about the API and APIs in general.  I'm also hopeful that this will help others to learn more about Star Trek and how STAPI works.
                     I'll add more API queries over time.  This is a work in progress that I plan to continue to add to over time.  However, it's far enough along to be useful.  I hope this is helpful 
                     and maybe a little fun!
                 </p>

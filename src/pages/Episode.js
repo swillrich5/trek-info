@@ -20,23 +20,8 @@ const Episode = ( { match } ) => {
                 console.log(err);
             }
         }
-        // console.log("In useEffect");
         getEpisodeDetail();
     }, [match.params.uid]);
-
-    // const getEpisodeDetail = async () => {
-    //     try {
-    //         setLoading(true);
-    //         console.log("loading = " + loading);
-    //         const res = await axios.get("http://stapi.co/api/v1/rest/episode?uid=" + match.params.uid);
-    //         console.log(res.data.episode);
-    //         setLoading(false);
-    //         setEpisode(res.data.episode);
-    //     }
-    //     catch(err) {
-    //         console.log(err);
-    //     }
-    // }
 
     if (episode) {
         return (
