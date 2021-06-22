@@ -14,11 +14,13 @@ const Home = () => {
                     I'll add more API queries over time.  This is a work in progress that I plan to continue to add to over time.  However, it's far enough along to be useful.  I hope this is helpful 
                     and maybe a little fun!
                 </p>
-                <p className="lead mt-3 mb-5">Special thanks to Cezary Kluczyński for putting together this very extensive API and allow me and others to use it.  Information on STAPI can 
-                    be found <a className="text-primary" href="http://stapi.co/">here</a>.  The GitHub repo can be found <a className="text-primary" href="https://github.com/cezarykluczynski/stapi">here</a>
+                <p className="lead mt-3">Special thanks to Cezary Kluczyński for putting together this very extensive API and allow me and others to use it.  Information on STAPI can 
+                    be found <a className="text-primary" href="http://stapi.co/">here</a>.  The GitHub repo can be found <a className="text-primary" href="https://github.com/cezarykluczynski/stapi">here</a>.
+                </p>
+                <p className="lead mt-3 mb-5">My code repo for this app can be found in my <a  className="text-primary" href="https://github.com/swillrich5/trek-info">GitHub</a>.  Also, here's a link to my <a className="text-primary" href="https://www.scottwillrich.com/">portfolio site</a>.
                 </p>
                 <Link className="row justify-content-center" to='/characters'>
-                    <div className="card col-3 justify-content-center shadow-lg bg-light rounded">
+                    <div className="card col-md-12 col-lg-3 justify-content-center shadow-lg bg-light rounded">
                         <img className="card-img-top mx-auto pt-3" src={spock} alt="Spock"/>
                         <div className="card-body">
                             <p className="card-text text-center">Characters</p>

@@ -6,7 +6,7 @@ const SearchCharacterResults = (props) => {
     return (
         <div className="row">
             {props.characters.map(character =>
-                <div key={character.uid} className='col-4 justify-content-around'>
+                <div key={character.uid} className='col-lg-4 col-md-12 justify-content-around'>
                     <div className="card mb-3">
                         <div className="card-body">
                             <h5 className="card-title">{character.name}</h5>

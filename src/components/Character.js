@@ -32,20 +32,20 @@ const Character = ( { match } ) => {
                     <h4>Character Name: {character.name}</h4>
                     <div className="pl-5 ml-5 justify-content-center">
                         <div className="row justify-content-start">
-                            <p className='col-5'>Species: {character.serialNumber ? (character.serialNumber) : (<span>N/A</span>) }</p>
-                            <p className='col-5'>Gender: {character.gender}</p>
+                            <p className='col-lg-5 col-md-12'>Species: {character.serialNumber ? (character.serialNumber) : (<span>N/A</span>) }</p>
+                            <p className='col-lg-5 col-md-12'>Gender: {character.gender}</p>
                         </div>
                         <div className="row justify-content-start">
-                            <p className='col-5'>Year of Birth: {character.yearOfBirth ? (character.yearOfBirth) : (<span>unknown</span>) }</p>
-                            <p className='col-5'>Year of Death: {character.yearOfDeath ? (character.yearOfDeath) : (<span>unknown</span>) }</p>
+                            <p className='col-lg-5 col-md-12'>Year of Birth: {character.yearOfBirth ? (character.yearOfBirth) : (<span>unknown</span>) }</p>
+                            <p className='col-lg-5 col-md-12'>Year of Death: {character.yearOfDeath ? (character.yearOfDeath) : (<span>unknown</span>) }</p>
                         </div>
                         <div className="row justify-content-start">
-                            <p className='col-5'>Blood Type: {character.bloodType ? (character.bloodType) : (<span>unknown</span>) }</p>
-                            <p className='col-5'>Put Something Here</p>
+                            <p className='col-lg-5 col-md-12'>Blood Type: {character.bloodType ? (character.bloodType) : (<span>unknown</span>) }</p>
+                            <p className='col-lg-5 col-md-12'>Put Something Here</p>
                         </div>
                         {(character.characterSpecies.length > 0) && 
                             (<div className="row justify-content-start">
-                                <p className='col-5'>Species: 
+                                <p className='col-lg-5 col-md-12'>Species: 
                                     {character.characterSpecies.map(species => 
                                         <span key={species.uid}> {' '} {species.name} {' '} </span> )}
                                 </p>
@@ -57,7 +57,7 @@ const Character = ( { match } ) => {
                             <h4>Episodes</h4>
                             <div className="row justify-content-around">
                                 {character.episodes.map(episode =>
-                                    <div key={episode.uid} className="card col-3 mx-1 mb-1 px-0" >
+                                    <div key={episode.uid} className="card col-lg-3 col-md-12 mx-1 mb-1 px-0" >
                                         <div className="card-body py-2 px-0">
                                             <Link to={`/episode/${episode.uid}`}><h5 className="card-title px-1">{episode.title}</h5></Link>
                                             {/* <h5 className="card-title px-1">{episode.title}</h5> */}

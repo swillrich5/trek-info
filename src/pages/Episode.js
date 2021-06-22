@@ -28,22 +28,22 @@ const Episode = ( { match } ) => {
             <div className="container space-background">
                 <div className="jumbotron">
                     <h4>Episode: {episode.title}</h4>
-                    <div className="pl-5 ml-5 justify-content-center">
+                    <div className="pl-3 ml-3 justify-content-center">
                         <div className="row justify-content-start">
-                            <p className='col-5'>Series: {episode.series.title}</p>
-                            <p className='col-5'>Episode No.: {episode.episodeNumber}</p>
+                            <p className='col-lg-5 col-md-12'>Series: {episode.series.title}</p>
+                            <p className='col-lg-5 col-md-12'>Episode No.: {episode.episodeNumber}</p>
                         </div>
                         <div className="row justify-content-start">
-                            <p className='col-5'>Production Company: {episode.series.productionCompany.name}</p>
+                            <p className='col-lg-5 col-md-12'>Production Company: {episode.series.productionCompany.name}</p>
                             <p className='col-5'>Original Broadcaster: {episode.series.originalBroadcaster.name}</p>
                         </div>
                         <div className="row justify-content-start">
-                            <p className='col-5'>Season: {episode.season.seasonNumber}</p>
-                            <p className='col-5'>Original Air Date: {episode.usAirDate}</p>
+                            <p className='col-lg-5 col-md-12'>Season: {episode.season.seasonNumber}</p>
+                            <p className='col-lg-5 col-md-12'>Original Air Date: {episode.usAirDate}</p>
                         </div>
                         <div className="row justify-content-start">
-                            <p className='col-5'>German Title: {episode.titleGerman}</p>
-                            <p className='col-5'>Japanese Title: {episode.titleJapanese}</p>
+                            <p className='col-lg-5 col-md-12'>German Title: {episode.titleGerman}</p>
+                            <p className='col-lg-5 col-md-12'>Japanese Title: {episode.titleJapanese}</p>
                         </div>
                     </div>
                     {( episode.teleplayAuthors.length > 0) &&
@@ -51,7 +51,7 @@ const Episode = ( { match } ) => {
                             <h4 className="mt-3">Teleplay Written By</h4>
                             <div className="row justify-content-around">
                                 {episode.teleplayAuthors.map(author =>
-                                    <div key={author.uid} className="card col-3 mx-1 mb-1 px-0" >
+                                    <div key={author.uid} className="card col-lg-3 col-md-12 mx-1 mb-1 px-0" >
                                         <div className="card-body py-2 px-0">
                                             {/* <Link to={`/episode/${episode.uid}`}><h5 className="card-title px-1">{episode.title}</h5></Link> */}
                                             <h5 className="card-title px-1">{author.name}</h5>
